@@ -1,5 +1,4 @@
 // variables
-let mines = []
 
 // helping functions
 const getRandomNumbers = (max) => {
@@ -36,6 +35,8 @@ const toPushOrNotToPush = (value, array, condition, func) => {
 
 // specific functions
 const fillMinesArray = () => {
+    let mines = []
+
     while (mines.length < 10) {
         let randomValue = getRandomNumbers(81)
         toPushOrNotToPush(randomValue, mines, checkUniqueness, pushToArray)
@@ -44,4 +45,4 @@ const fillMinesArray = () => {
     return mines
 }
 
-module.exports = fillMinesArray
+module.exports =  fillMinesArray
