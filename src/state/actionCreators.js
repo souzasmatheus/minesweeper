@@ -1,21 +1,18 @@
 // import
 const C = require('./constants')
-const {presetField, fillMinesArray} = require('../lib/minesweeperMaker')
 
 // actions
-const sortSquares = () => ({
+export const sortSquares = (array) => ({
     type: C.SORT_SQUARES,
-    squares: presetField(fillMinesArray())
+    squares: array
 })
 
-const showValue = (id) => ({
+export const showValue = (id) => ({
     type: C.SHOW_VALUE,
     id
 })
 
-const finishGame = () => ({
+export const finishGame = () => ({
     type: C.FINISH_GAME,
     finish: true
 })
-
-module.exports = {sortSquares, showValue, finishGame}

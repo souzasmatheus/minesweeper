@@ -1,6 +1,6 @@
 const C = require('./constants')
 
-const square = (state={}, action) => {
+export const square = (state={}, action) => {
     switch (action.type) {
         case C.SHOW_VALUE:
             return (state.id !== action.id) ? 
@@ -14,7 +14,7 @@ const square = (state={}, action) => {
     }
 }
 
-const squares = (state=[], action) => {
+export const squares = (state=[], action) => {
     switch (action.type) {
         case C.SORT_SQUARES:
             return action.squares
@@ -27,7 +27,7 @@ const squares = (state=[], action) => {
     }
 }
 
-const finish = (state=false, action) => {
+export const finish = (state=false, action) => {
     switch (action.type) {
         case C.FINISH_GAME:
             return action.finish
@@ -35,5 +35,3 @@ const finish = (state=false, action) => {
             return state
     }
 }
-
-module.exports = {square, squares, finish}
