@@ -12,7 +12,16 @@ export const showValue = (id) => ({
     id
 })
 
-export const finishGame = () => ({
-    type: C.FINISH_GAME,
-    finish: true
-})
+export const finishGame = (...arg) => {
+    if (arg.length !== 0) {
+        return {
+            type: C.FINISH_GAME,
+            finish: false
+        }
+    } else {
+        return {
+            type: C.FINISH_GAME,
+            finish: true
+        }
+    }
+}
