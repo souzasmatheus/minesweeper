@@ -1,0 +1,16 @@
+@keyframes explode {
+    from { font-size: 3px; }
+    to { font-size: 70px; }
+}
+
+.modal {
+    width: 100%;
+    text-align: center;
+}
+
+.modal h1 {
+    font-family: ringofire;
+    font-size: 70px;
+    animation-name: explode;
+    animation-duration: 3s;
+}
